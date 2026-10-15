@@ -4,11 +4,11 @@
   --bg2:#101014;
   --panel:#141419;
   --panel-line:#26262e;
-  --ink:#f2ede1;
-  --mute:#b3a892;
-  --faint:#7d7663;
-  --amber:#e2a458;
-  --amber-deep:#b97f36;
+  --ink:#f4f4f2;
+  --mute:#b8b6b0;
+  --faint:#8a8880;
+  --amber:#e9e6df;
+  --amber-deep:#9a968c;
   --paper:#e8e8e8;
   --serif:Georgia,'Iowan Old Style','Times New Roman',serif;
   --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
@@ -22,7 +22,7 @@ body{
 }
 img{max-width:100%;display:block}
 a{color:var(--amber)}
-a:hover{color:#f0bc77}
+a:hover{color:#ffffff}
 .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
 
 /* Header */
@@ -35,7 +35,12 @@ a:hover{color:#f0bc77}
 .wordmark{
   font-family:var(--serif);font-size:23px;letter-spacing:.04em;color:var(--ink);
   text-decoration:none;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:12px;
 }
+.wordmark .logo-mark{
+  width:46px;height:46px;border-radius:50%;flex:none;
+}
+.wordmark .wm-text{line-height:1.15}
 .wordmark b{color:var(--amber);font-weight:normal}
 .wordmark small{
   display:block;font-family:var(--sans);font-size:10px;letter-spacing:.34em;
@@ -70,7 +75,7 @@ h3{font-size:22px}
   font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--amber);
   margin:0 0 14px;font-weight:600;
 }
-.lede{font-size:clamp(18px,2.2vw,21px);color:#ddd5c2;max-width:44em}
+.lede{font-size:clamp(18px,2.2vw,21px);color:#e3e1da;max-width:44em}
 .mute{color:var(--mute)}
 .small{font-size:14px;color:var(--mute)}
 
@@ -97,9 +102,9 @@ h3{font-size:22px}
   display:inline-block;text-decoration:none;font-size:16px;padding:12px 22px;border-radius:9px;
   border:1px solid var(--amber);color:#14100a;background:var(--amber);font-weight:600;
 }
-.btn:hover{background:#f0bc77;color:#14100a}
+.btn:hover{background:#ffffff;color:#14100a}
 .btn.ghost{background:transparent;color:var(--amber)}
-.btn.ghost:hover{background:rgba(226,164,88,.12);color:#f0bc77}
+.btn.ghost:hover{background:rgba(233,230,223,.12);color:#ffffff}
 
 /* Sections and cards */
 section.block{padding:72px 0}
