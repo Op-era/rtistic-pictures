@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Film Tools — RTistic Pictures</title>
+<meta name="description" content="The tools RTistic Pictures built for its own work: AnimAIt, our 2D animation rig, the FEN Animator and Chessboard Stepper for chess films, and our standing 3D set. Plus a way to request the tool you wish existed.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">RTistic <b>Pictures</b><small>Animation · Editing · Film Tools</small></a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="studio.html">The Studio</a>
+      <a href="editing.html">Editing</a>
+      <a href="tools.html" aria-current="page">Film Tools</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="block" style="padding-bottom:36px">
+    <div class="wrap">
+      <p class="kicker">Film Tools</p>
+      <h1>We build the tools the work needs.</h1>
+      <p class="lede">When a job needs a tool that does not exist, the studio builds it. These are the tools running in the studio today. Each one is filed in the Haven Command Systems Library, and each one earns its place on real productions, not demos.</p>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:16px">
+    <div class="wrap">
+      <div class="grid c2">
+        <article class="card">
+          <div class="body">
+            <p class="kicker" style="margin-bottom:6px">The Flagship</p>
+            <h3>AnimAIt</h3>
+            <p>AnimAIt is our own 2D animation rig, and it moves every character in the series. Each character is drawn as separate parts. The bones, poses, and actions are kept as plain text files, and finished actions go into a library the studio reuses from episode to episode, the way the classic studios reused their best work. The rig drives the animation inside DaVinci Resolve, and the picture is timed to voices that were recorded first.</p>
+            <span class="status">Running the series now</span>
+          </div>
+        </article>
+        <article class="card">
+          <div class="body">
+            <p class="kicker" style="margin-bottom:6px">Chess Films</p>
+            <h3>FEN Animator</h3>
+            <p>The FEN Animator compares two chess positions and renders the frames between them, so a piece slides to its new square instead of jumping. The finished frame sequence drops straight into the edit. It exists because a skipped frame can make one piece look like another, and our films do not skip frames.</p>
+            <span class="status">Built for the Stafford Gambit film, now standard</span>
+          </div>
+        </article>
+        <article class="card">
+          <div class="body">
+            <p class="kicker" style="margin-bottom:6px">Chess Films</p>
+            <h3>Chessboard Stepper</h3>
+            <p>The Stepper takes a chess position written as one line of text, a FEN string, and builds the full board inside DaVinci Resolve. It then plays a whole list of moves on that one board, each piece riding its own path at a steady speed. Long games stay manageable in the edit, and the board on screen always matches the position being discussed.</p>
+            <span class="status">Built for the Rubinstein lesson rebuild</span>
+          </div>
+        </article>
+        <article class="card">
+          <div class="body">
+            <p class="kicker" style="margin-bottom:6px">The Standing Set</p>
+            <h3>The Noir Board</h3>
+            <p>Our chess films are rendered on a 3D set the studio built in Blender: a classic stone Staunton set standing on a flamed maple table, with fog, a hard side light, and a floating overhead camera that eases along with the moving piece. The set, the lights, and the camera rules are all saved, so every new film is shot in the same room as the last one.</p>
+            <span class="status">The set for every new chess film</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="request">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Request a Tool</p>
+        <h2>Tell us what you wish existed.</h2>
+        <p class="mute">We study what filmmakers are asking for, what they complain about, and what they pay for, and we build toward the real demand. A request form is one signal in that study. Every request is read and counted. If the tool you describe matches what the work needs next, it may get built, and the person who asked will hear about it first.</p>
+      </div>
+      <form class="tool-form" id="tool-request-form">
+        <label>Your name
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>Your email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>What should the tool do?
+          <textarea name="does" required placeholder="Describe the job the tool would do, as plainly as you can."></textarea>
+        </label>
+        <label>What do you do today instead?
+          <textarea name="instead" required placeholder="Tell us the workaround you use now, or what it costs you to go without."></textarea>
+        </label>
+        <div>
+          <button class="btn" type="submit">Send the request</button>
+        </div>
+        <p class="small" id="tool-request-note">The form opens your own email app with the request written out, addressed to the studio. Nothing is sent until you press send in your mail. If email is easier, write to rtisticpictures@gmail.com directly.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <a class="wordmark" href="index.html">RTistic <b>Pictures</b><small>Animation · Editing · Film Tools</small></a>
+      <nav aria-label="Footer">
+        <a href="studio.html">The Studio</a>
+        <a href="editing.html">Editing</a>
+        <a href="tools.html">Film Tools</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://scriptforgeai.studio">ScriptForge</a>
+        <a href="https://d4chess.club">D4Chess.Club</a>
+        <a href="https://www.imdb.com/name/nm1895702/">Shane Foster on IMDb</a>
+      </nav>
+    </div>
+    <p class="fine">RTistic Pictures is the studio arm of Haven Command LLC, Fresno, California. © <span data-year>2026</span> Haven Command LLC.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
