@@ -44,4 +44,42 @@
       }
     });
   }
+
+  // Contact form: posts to the studio's contact endpoint, which emails the
+  // message to the studio inbox. On any failure the note under the form
+  // points the visitor at the studio's email address instead, so a message
+  // is never lost to a form error.
+  var contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var note = document.getElementById('contact-note');
+      var button = contactForm.querySelector('button[type="submit"]');
+      if (button) { button.disabled = true; }
+      if (note) { note.textContent = 'Sending...'; }
+      fetch('https://rtistic-contact.fly.dev/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: contactForm.elements['name'].value.trim(),
+          email: contactForm.elements['email'].value.trim(),
+          kind: contactForm.elements['kind'].value,
+          message: contactForm.elements['message'].value.trim(),
+          company: contactForm.elements['company'].value
+        })
+      }).then(function (resp) {
+        if (!resp.ok) { throw new Error('send failed'); }
+        contactForm.hidden = true;
+        var thanks = document.getElementById('contact-thanks');
+        if (thanks) { thanks.hidden = false; }
+      }).catch(function () {
+        if (button) { button.disabled = false; }
+        if (note) {
+          note.textContent =
+            'The form could not send just now. Please write to ' +
+            'rtisticpictures@gmail.com directly and we will get it just the same.';
+        }
+      });
+    });
+  }
 })();

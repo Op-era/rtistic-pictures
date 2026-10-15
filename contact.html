@@ -30,9 +30,38 @@
     <div class="wrap">
       <p class="kicker">Contact</p>
       <h1>Write to the studio.</h1>
-      <p class="lede">Email is the way to reach RTistic Pictures. We read every message ourselves.</p>
-      <div class="hero-actions">
-        <a class="btn" href="mailto:rtisticpictures@gmail.com">rtisticpictures@gmail.com</a>
+      <p class="lede">Tell us what you are working on. The form below sends your message straight to the studio, and we read every message ourselves.</p>
+      <form class="tool-form" id="contact-form" style="margin-top:34px">
+        <label>Your name
+          <input name="name" type="text" autocomplete="name" required maxlength="100">
+        </label>
+        <label>Your email
+          <input name="email" type="email" autocomplete="email" required maxlength="254">
+        </label>
+        <label>What kind of work is it?
+          <select name="kind">
+            <option>The series</option>
+            <option>Editing work</option>
+            <option>Film tools</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label>Your message
+          <textarea name="message" required minlength="10" maxlength="5000"></textarea>
+        </label>
+        <div class="hp-field" aria-hidden="true">
+          <label>Company
+            <input name="company" type="text" tabindex="-1" autocomplete="off">
+          </label>
+        </div>
+        <div>
+          <button class="btn" type="submit">Send the message</button>
+        </div>
+        <p class="small" id="contact-note">If the form gives you any trouble, write to rtisticpictures@gmail.com directly and we will get it just the same.</p>
+      </form>
+      <div id="contact-thanks" hidden style="margin-top:34px">
+        <h2>Thank you. Your message is on its way.</h2>
+        <p class="lede">We read everything ourselves and will write back at the address you gave us.</p>
       </div>
       <div class="grid c3" style="margin-top:52px">
         <div class="point">
